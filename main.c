@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 int compare(const void *a, const void *b) {
     return (*(int*)a - *(int*)b);
@@ -33,7 +34,6 @@ int main(int argc, char* argv[]){
      for ( int i = 0; i < line_num; i++){
         total += num_array[i];
       
-        printf("%d \n",num_array[i]);
      }
      printf("%d total \n",total);
      printf("%d line num \n",line_num);
@@ -44,6 +44,8 @@ int main(int argc, char* argv[]){
        
        
      }
+     int s = variance/line_num;
+     double std_dev = sqrt(s);
     
      if (line_num % 2 == 0) {
         median = (num_array[line_num/2] + num_array[line_num/2 + 1]) / 2;
@@ -53,7 +55,8 @@ int main(int argc, char* argv[]){
 
      printf("Average: %d \n", average);
       printf("Median %d \n", median);
-        printf("Variance %d \n", variance/10);
+        printf("Variance %d \n", variance/line_num);
+         printf("Standard Deviation %f \n", std_dev);
     fclose(file_read);
   
     
