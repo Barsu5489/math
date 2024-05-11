@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     }
     // Output the average, median, variance and standar deviation
     printf("Average: %.0Lf\n", (long double)round(average));
-    printf("Median: %.0Lf\n", (long double)ceil(median));
+    printf("Median: %.0Lf\n", (long double)round(median));
     printf("Variance: %.0Lf\n", (long double)round(variance));
     printf("Standard Deviation %.0Lf\n", (long double)round(std_dev));
     fclose(file_read);
