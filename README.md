@@ -12,7 +12,7 @@
 ```bash
  cd math-skills
  ```
-- To compile run
+- To compile, run
 ```bash
 make
 ```
